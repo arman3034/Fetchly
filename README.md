@@ -47,7 +47,7 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 
 ### 8. Accessible Keyboard Shortcuts Reader Modal (`F1` & `Shift + F1`)
 * **Context Help (`F1`)**: Opens quick shortcuts for your currently active tab.
-* **Master Shortcuts Guide (`Shift + F1`)**: Opens the universal reference guide structured with clear tab headings.
+* **Master Shortcuts Guide (`Shift + F1`)**: Opens the universal reference guide structured with clear 5 tab headings.
 * **Heading Navigation (`H` / `Shift + H`)**: Screen reader users can jump through tab headings with `H` and read line-by-line with Arrow keys.
 * **1-Click Actions**: Copy all shortcuts (`Alt + C`), Save guide to Desktop as TXT (`Alt + S`), or Close safely (`Escape`).
 
@@ -59,7 +59,7 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 
 ## Universal Keyboard Shortcuts Reference
 
-### Download Tab
+### 1. Download Tab
 | Shortcut | Action Description |
 | :--- | :--- |
 | `Alt + U` | Focus and select URL input field |
@@ -79,16 +79,15 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 | `Alt + E` | Open containing directory in Windows Explorer |
 | `Alt + X` | Delete completed file from disk |
 
-### Playlist and Queue Tab
+### 2. History and Incomplete Tab
 | Shortcut | Action Description |
 | :--- | :--- |
-| `Space` | Toggle focused playlist item checked/unchecked |
-| `Alt + S` | Pause currently selected active download in queue |
-| `Alt + R` | Resume paused download from partial file |
-| `Alt + A` | Select and check all playlist items |
-| `Alt + D` | Deselect and uncheck all playlist items |
+| `Alt + O` | Play selected media from download history |
+| `Alt + E` | Open containing directory in Windows Explorer |
+| `Alt + X` | Delete selected file from disk and remove history record |
+| `Alt + C` | Clear entire download history list |
 
-### Settings Tab
+### 3. Settings Tab
 | Shortcut | Action Description |
 | :--- | :--- |
 | `Alt + B` | Browse and choose custom download folder |
@@ -99,24 +98,19 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 | `Alt + C` | Toggle audio chimes sound feedback |
 | `Alt + E` | Toggle soft subtitles embedding for video |
 | `Alt + S` | Toggle separate .SRT subtitle file saving |
-| `Alt + B` | Toggle live background clipboard monitor |
 | `Alt + W` | Toggle start Fetchly on Windows startup |
 | `Alt + H` | Enable global show hotkey (Win+Alt+F) |
 | `Alt + A` | Save and persist preferences to disk |
 
-### History Tab
-| Shortcut | Action Description |
-| :--- | :--- |
-| `Alt + O` | Play selected media from download history |
-| `Alt + E` | Open containing directory in Windows Explorer |
-| `Alt + X` | Delete selected file from disk and remove history record |
-| `Alt + C` | Clear entire download history list |
-
-### About and Updates Tab
+### 4. About Us Tab
 | Shortcut | Action Description |
 | :--- | :--- |
 | `Alt + N` | Copy developer name (Muhammad Arman) to clipboard |
 | `Alt + M` | Copy developer contact email (arman.munir77@gmail.com) |
+
+### 5. Updates Tab
+| Shortcut | Action Description |
+| :--- | :--- |
 | `Alt + K` | Check GitHub for new Fetchly application updates |
 | `Alt + U` | Check and update core extraction components (yt-dlp, FFmpeg, Deno) |
 
@@ -126,7 +120,7 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 | `Ctrl + Shift + V` | Visual Sight Inspector to hear visual layout and focus indicators of focused control |
 | `Ctrl + Shift + A` | Global Application Visual Overview describing icon, window frame, and canvas |
 | `F1` | Open quick keyboard shortcuts help for active tab |
-| `Shift + F1` | Open Master Keyboard Shortcuts Guide containing all tabs |
+| `Shift + F1` | Open Master Keyboard Shortcuts Guide containing all 5 tabs |
 | `Ctrl + Tab` | Switch forward to next tab |
 | `Ctrl + Shift + Tab` | Switch backward to previous tab |
 | `Ctrl + Plus` | Increase user interface font size (125%, 150%, 175%) |
