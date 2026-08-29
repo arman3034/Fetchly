@@ -1,0 +1,14 @@
+{
+  "app_name": "Fetchly",
+  "version": "0.9.8",
+  "release_date": "2026-08-29",
+  "minimum_supported_version": "0.9.0",
+  "installer_url": "https://github.com/arman3034/Fetchly/releases/download/v0.9.8/Fetchly_Setup_v0.9.8.exe",
+  "portable_url": "https://github.com/arman3034/Fetchly/releases/download/v0.9.8/Fetchly_v0.9.8_Portable.zip",
+  "release_notes": "Smart Accessible Windows Setup Wizard, Subtitles Engine, Time-Trim Clipping, and 180 Verified Test Suites.",
+  "components": {
+    "yt_dlp": "latest",
+    "ffmpeg": "latest",
+    "aria2c": "latest"
+  }
+}
