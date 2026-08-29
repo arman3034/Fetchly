@@ -45,11 +45,13 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 * **Tactile Sound Cues**: High-fidelity sound feedback for modal opening, closing, line navigation, and 3D spatial stereo page flips (`H` sweeps left-to-right, `Shift + H` sweeps right-to-left).
 * **Zero External Dependencies**: All sound assets are embedded directly into the binary with pure mathematical DSP generation.
 
-### 8. Accessible Keyboard Shortcuts Reader Modal (`F1` & `Shift + F1`)
-* **Context Help (`F1`)**: Opens quick shortcuts for your currently active tab.
-* **Master Shortcuts Guide (`Shift + F1`)**: Opens the universal reference guide structured with clear 5 tab headings.
-* **Heading Navigation (`H` / `Shift + H`)**: Screen reader users can jump through tab headings with `H` and read line-by-line with Arrow keys.
-* **1-Click Actions**: Copy all shortcuts (`Alt + C`), Save guide to Desktop as TXT (`Alt + S`), or Close safely (`Escape`).
+### 8. Smart Accessible Windows Setup Wizard & Uninstaller
+* **Self-Contained Installer (`Fetchly_Setup_v0.9.8.exe`)**: Offline installer bundling all core binaries (`Fetchly.exe`, `yt-dlp.exe`, `ffmpeg.exe`, `aria2c.exe`, `deno.exe`, `Tolk.dll`, and screen reader DLLs).
+* **Accessible 4-Page Wizard**: Features full NVDA/JAWS speech announcements and intuitive shortcuts: `&Next` (`Alt + N`), `&Back` (`Alt + B`), `&Install` (`Alt + I`), `&Finish` (`Alt + F`), and `&Cancel` (`Alt + C`).
+* **Shortcut Checkboxes**: Customizable `Create &Desktop Shortcut` (`Alt + D`, default unchecked), `Add to &Start Menu` (`Alt + S`, default unchecked), and `Launch Fetchly Now` (`Alt + L`, default checked).
+* **Active Process Detection**: Automatically detects running instances of Fetchly and prompts to cleanly close and overwrite without corrupting files.
+* **Clean Uninstaller (`uninstall.exe`)**: Registered in Windows Programs and Features (Installed Apps) under publisher "Muhammad Arman", with options to keep or purge download history.
+* **Silent Auto-Update Mode (`/SILENT`)**: Supports background 1-click upgrades when triggered from Fetchly's Updates Tab.
 
 ### 9. Low-Vision Readability & UI Zoom
 * **Dynamic Font Scaling**: Real-time font resizing via `Ctrl + Plus`, `Ctrl + Minus`, and `Ctrl + 0` (from 100% up to 175% Large Print).
@@ -135,7 +137,7 @@ Fetchly allows you to download high-fidelity video and audio from over 1,800+ su
 ## System Requirements
 * **Operating System**: Windows 10 or Windows 11 (64-bit recommended)
 * **Screen Reader Support**: NVDA, Freedom Scientific JAWS, or Windows SAPI
-* **Architecture**: Native x86_64 portable application (no installation or admin rights required)
+* **Architecture**: Available as standalone setup installer (`Fetchly_Setup_v0.9.8.exe`) or portable zip (`Fetchly_v0.9.8_Portable.zip`)
 
 ---
 
