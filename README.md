@@ -1,172 +1,130 @@
-# Fetchly (Version 0.9.5)
-**Universal High-Performance Accessible Media Downloader**
+# Fetchly - High-Performance Accessible Media Downloader
 
-Developed by **Muhammad Arman** (<arman.munir77@gmail.com>)  
-*Proprietary Software. All Rights Reserved.*
+**Fetchly** is a native Windows desktop media downloader engineered for ultra-fast parallel multi-stream downloads alongside comprehensive, zero-latency accessibility for blind developers, screen reader navigators (NVDA & Freedom Scientific JAWS), and power users.
 
 ---
 
-## Welcome to Fetchly
+## Overview
 
-Fetchly is a high-speed, lightweight, and fully accessible media downloader engineered in Native Rust for Windows. Designed from the ground up for zero-lag screen reader accessibility (NVDA, JAWS, Narrator) alongside a clean, modern interface for sighted users.
-
-Fetchly downloads high-fidelity video and audio from all major platforms:
-* **YouTube:** Videos, Shorts, Playlists, Channels, YouTube Music, and Live Streams (up to 8K Ultra HD at 60 FPS).
-* **Instagram:** Reels, Posts, Stories, and Video Clips.
-* **Facebook:** Watch, Reels, and Public Videos.
-* **TikTok:** High-Definition Videos with original audio.
-* **Twitter / X:** Video Clips and Media attachments.
-* **SoundCloud & Bandcamp:** High-quality studio audio streams.
-* **Direct URLs:** MP4, MP3, HLS (m3u8), FLV, WebM, and DASH web streams.
+Fetchly allows you to download high-fidelity video and audio from over 1,800+ supported websites (including YouTube, Instagram, Facebook, TikTok, Twitter/X, SoundCloud, Bandcamp, Vimeo, Reddit, Dailymotion, and direct media streams) with clean storage organization, tactile sound feedback, and effortless keyboard navigation.
 
 ---
 
-## Key Features
+## Key Capabilities
 
-1. **32-Stream Multi-Chunk Turbo Acceleration:**
-   Splits media files into 16 or 32 parallel streams to bypass server speed throttles and maximize your internet bandwidth.
+### 1. Parallel Multi-Stream Downloads
+* **Multi-Connection Acceleration**: Opens up to 16 or 32 simultaneous connections using Aria2c and yt-dlp to maximize bandwidth.
+* **Smart Format Visibility**: Automatically detects audio-only sources (such as SoundCloud, Bandcamp, and YouTube Music), hides video radio buttons, and sets format to MP3/FLAC with screen reader confirmation.
+* **Organized Storage Hierarchy**: Neatly categorizes downloaded files inside your `Downloads/Fetchly/` folder (`Fetchly/YouTube`, `Fetchly/Instagram`, `Fetchly/TikTok`, `Fetchly/Facebook`, `Fetchly/Videos`, and `Fetchly/Music`).
 
-2. **3D Spatial Audio Milestone Chimes (Clash-Free Stereo Panning):**
-   Subtle, luxury stereo chimes announce download progress with ear localization: 25% (Left Ear), 50% (Center), 75% (Right Ear), 100% (Grand 3D Stereo Victory Chord) without clashing with NVDA's progress beeps.
+### 2. Dual-Engine Screen Reader Accessibility (NVDA & Freedom Scientific JAWS)
+* **Zero-Latency Native Speech**: Integrates directly with NVDA Controller Client and Freedom Scientific JAWS (`jfwapi.dll`), with automatic Windows SAPI voice fallback.
+* **Milestone Voice Alerts**: Non-intrusive spoken notifications at 25%, 50%, 75%, and 100% download progress.
+* **On-Demand Progress Query (`Alt + P`)**: Instantly speaks live percentage, speed, and ETA without disturbing active downloads.
 
-3. **Media Inspector & Deep Stream Reader (`Alt + I`):**
-   Instantly inspect and hear video titles, accurate durations, available resolutions (8K, 4K, 1080p, MP3), and channel details with a single shortcut.
+### 3. Visual & Spatial Sensory Explainer (Mental Sight Engine)
+* **Focused Control Sight (`Ctrl + Shift + V`)**: Pressing `Ctrl + Shift + V` on any focused button, edit box, radio button, or checkbox plays a precision focal audio cue and speaks its visual styling, pixel dimensions (width/height), screen coordinates, active focus indicator (blinking cursor, dotted marquee, selection dot, checkmark), and exact keyboard interaction rules.
+* **Application Visual Overview (`Ctrl + Shift + A`)**: Pressing `Ctrl + Shift + A` plays a panoramic chord and speaks the full visual blueprint of Fetchly—describing the modern download emblem icon, 640x540 window geometry, rounded corners, title bar chrome, 5-tab strip, and central canvas.
 
-4. **Speech Verbosity Profiles (Standard / Beginner / Pro Minimalist):**
-   Choose your preferred speech experience in Settings: detailed step-by-step guidance for beginners, balanced alerts for standard use, or 90% reduced quiet mode with melodic tones for power users.
+### 4. 5-Second Live Audio Stream Probe (`Alt + T`)
+* **Hear Before Downloading**: Streams a 5-second audio preview directly to your headphones without saving files to disk, allowing blind users to confirm content before starting large downloads.
+* **Instant Stop (`Escape` / `Alt + T`)**: Stop playback immediately at any second.
 
-5. **Low-Vision Sighted Support & Dynamic Font Zoom:**
-   Features a high-contrast Neon Focus Ring for visual clarity and real-time font scaling via `Ctrl + Plus`, `Ctrl + Minus`, and `Ctrl + 0` (from 100% up to 175% Large Print).
+### 5. High-Definition Embedded Foley Audio Suite
+* **Tactile Sound Cues**: High-fidelity sound feedback for modal opening, closing, line navigation, and 3D spatial stereo page flips (`H` sweeps left-to-right, `Shift + H` sweeps right-to-left).
+* **Zero External Dependencies**: All sound assets are embedded directly into the binary with pure mathematical DSP generation.
 
-6. **Smart Clipboard Auto-Monitor & URL De-Tracking:**
-   When you copy any video link, Fetchly automatically strips marketing tracking tags (such as `&si=` and `&fbclid=`) and prepares the clean link instantly with gentle melodic cues and speech alerts.
+### 6. Accessible Keyboard Shortcuts Reader Modal (`F1` & `Shift + F1`)
+* **Context Help (`F1`)**: Opens quick shortcuts for your currently active tab.
+* **Master Shortcuts Guide (`Shift + F1`)**: Opens the universal reference guide structured with clear tab headings.
+* **Heading Navigation (`H` / `Shift + H`)**: Screen reader users can jump through tab headings with `H` and read line-by-line with Arrow keys.
+* **1-Click Actions**: Copy all shortcuts (`Alt + C`), Save guide to Desktop as TXT (`Alt + S`), or Close safely (`Escape`).
 
-3. **Platform-Aware Auto-Mode Switching:**
-   Copying music links (SoundCloud, YouTube Music) automatically switches Fetchly to Audio Only (MP3 320k) and routes files to your Music folder. Video links automatically configure 1080p Full HD.
-
-4. **Interactive Smart Playlist Checklist:**
-   When a playlist is detected, Fetchly displays an interactive checklist with video titles, durations, and range selection. You can download the entire playlist or select individual lessons with the Space bar.
-
-5. **Smart Pause, Resume & Incomplete Task Recovery:**
-   If your Wi-Fi disconnects or you pause a download, partial fragments are preserved on disk and can be resumed at any time from the History tab.
-
-6. **Customizable Global Show Hotkey:**
-   Press **`Win + Alt + F`** (or your custom chosen letter) from anywhere in Windows to instantly bring Fetchly to the front.
-
-7. **Instant Complete Exit (`Ctrl + Q`):**
-   Press **`Ctrl + Q`** inside Fetchly to cleanly terminate the application in 1 millisecond.
-
-8. **Dual Visual Themes:**
-   Supports Modern Fluent Charcoal Dark Mode and Clean Studio Light Mode.
+### 7. Low-Vision Readability & UI Zoom
+* **Dynamic Font Scaling**: Real-time font resizing via `Ctrl + Plus`, `Ctrl + Minus`, and `Ctrl + 0` (from 100% up to 175% Large Print).
+* **Dual Theming**: Supports High-Contrast Classic Light Theme and Modern Charcoal Dark Theme.
 
 ---
 
-## User Guide: Quick Start
+## Universal Keyboard Shortcuts Reference
 
-1. **Copy any media link** in your web browser (e.g. YouTube, TikTok, Facebook).
-2. Fetchly will automatically detect the link and announce it. Switch to Fetchly using **`Win + Alt + F`** (or `Alt + Tab`).
-3. Choose your format and quality:
-   * Press **`Alt + V`** for Video (MP4) or **`Alt + A`** for Audio Only (MP3 / FLAC).
-   * Press **`Alt + Q`** to select resolution (8K Ultra HD, 4K, 1080p, 720p, or 320 kbps MP3).
-4. Press **`Alt + D`** (or `Enter`) to start downloading.
-5. While downloading, press **`Alt + P`** at any time to hear your instant progress percentage and download speed.
-6. When download completes, press:
-   * **`Alt + O`** to Play the file immediately.
-   * **`Alt + E`** to Open the destination folder in Windows Explorer.
-
----
-
-## Complete Keyboard Shortcuts Reference
-
-Fetchly uses a standardized 5-Tab keyboard layout designed for effortless navigation with zero key collisions.
-
-### Global Shortcuts
-
-| Shortcut | Action |
+### Download Tab
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Win + Alt + F`** | Show / Restore Fetchly window from anywhere in Windows |
-| **`Ctrl + Tab`** | Move to Next Tab |
-| **`Ctrl + Shift + Tab`** | Move to Previous Tab |
-| **`Alt + P`** | Instantly hear download percentage and speed via Screen Reader |
-| **`Ctrl + Plus`** | Zoom In UI Font Size (125%, 150%, 175% Large Print) |
-| **`Ctrl + Minus`** | Zoom Out UI Font Size |
-| **`Ctrl + 0`** | Reset UI Font Size to 100% Standard |
-| **`Ctrl + Q`** | Exit and close Fetchly completely |
-| **`Alt + F4`** | Close window (Prompts safety confirmation if download is active) |
+| `Alt + U` | Focus and select URL input field |
+| `Alt + L` | Paste clipboard link into URL field |
+| `Alt + V` | Select Video MP4 download mode |
+| `Alt + A` | Select Audio MP3 extraction mode |
+| `Alt + Q` | Open Quality dropdown to select resolution or bitrate |
+| `Alt + D` | Start downloading current media |
+| `Alt + C` | Cancel active download safely |
+| `Alt + I` | Open Media Inspector to read title, duration, and formats |
+| `Alt + T` | Play 5-Second live audio preview probe |
+| `Alt + P` | Speak instantaneous download progress percentage |
+| `Alt + O` | Play completed downloaded media file |
+| `Alt + E` | Open containing directory in Windows Explorer |
+| `Alt + X` | Delete completed file from disk |
 
----
-
-### Tab 1: Download Screen
-
-| Shortcut | Feature / Action |
+### Playlist and Queue Tab
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Alt + U`** | Focus Media URL Edit Box |
-| **`Alt + L`** | Paste Link from Clipboard manually |
-| **`Alt + V`** | Select Video (MP4) Format |
-| **`Alt + A`** | Select Audio Only Format |
-| **`Alt + Q`** | Open Quality / Resolution Dropdown |
-| **`Alt + D` / `Enter`** | Start Download |
-| **`Alt + I`** | Inspect Media Metadata (Title, Duration, Qualities, Channel) |
-| **`Alt + S`** | Pause Download |
-| **`Alt + R`** | Resume Download |
-| **`Alt + C` / `Esc`** | Cancel Active Download |
-| **`Alt + O`** | Play Downloaded File (Completion View) |
-| **`Alt + E`** | Open in Windows Explorer (Completion View) |
-| **`Alt + X`** | Delete Downloaded File (Completion View) |
+| `Space` | Toggle focused playlist item checked/unchecked |
+| `Alt + S` | Pause currently selected active download in queue |
+| `Alt + R` | Resume paused download from partial file |
+| `Alt + A` | Select and check all playlist items |
+| `Alt + D` | Deselect and uncheck all playlist items |
 
----
-
-### Tab 2: History and Incomplete Screen
-
-| Shortcut | Feature / Action |
+### Settings Tab
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Alt + R`** | Resume Selected Incomplete / Paused Download |
-| **`Alt + D`** | Redownload Task from the beginning |
-| **`Alt + C`** | Copy Original Media URL to Clipboard |
-| **`Alt + O`** | Play Selected Media File |
-| **`Alt + E`** | Open Destination Folder in Explorer |
-| **`Alt + X`** | Delete Task Record |
-| **`Alt + A`** | Clear Entire Download History |
+| `Alt + B` | Browse and choose custom download folder |
+| `Alt + Q` | Select default quality tier |
+| `Alt + S` | Configure parallel turbo stream count (16 or 32) |
+| `Alt + V` | Select speech verbosity profile (Standard, Beginner, Pro Minimal) |
+| `Alt + A` | Save and persist preferences to disk |
 
----
-
-### Tab 3: Settings Screen
-
-| Shortcut | Feature / Action |
+### History Tab
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Alt + F`** | Focus Default Download Folder Path |
-| **`Alt + B`** | Browse and Pick a New Download Folder |
-| **`Alt + Q`** | Set Default Video Quality |
-| **`Alt + M`** | Set Parallel Streams (16 Standard, 32 Turbo, 8 Balanced, 4 Light) |
-| **`Alt + T`** | Set App Theme (System Default, Dark Mode, Light Mode) |
-| **`Alt + B`** | Toggle Live Background Clipboard Monitor |
-| **`Alt + W`** | Toggle Start Fetchly on Windows Startup |
-| **`Alt + K`** | Toggle Global Show Shortcut & Custom Letter Box |
-| **`Alt + S`** | Save All Preferences to Disk |
+| `Alt + O` | Play selected media from download history |
+| `Alt + E` | Open containing directory in Windows Explorer |
+| `Alt + X` | Delete selected file from disk and remove history record |
+| `Alt + C` | Clear entire download history list |
 
----
-
-### Tab 4: About Us Screen
-
-| Shortcut | Feature / Action |
+### About and Updates Tab
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Alt + N`** | Copy Developer Name (Muhammad Arman) |
-| **`Alt + M`** | Copy Support Email Address (<arman.munir77@gmail.com>) |
+| `Alt + N` | Copy developer name (Muhammad Arman) to clipboard |
+| `Alt + M` | Copy developer contact email (arman.munir77@gmail.com) |
+| `Alt + K` | Check GitHub for new Fetchly application updates |
+| `Alt + U` | Check and update core extraction components (yt-dlp, FFmpeg, Deno) |
 
----
-
-### Tab 5: Updates Screen
-
-| Shortcut | Feature / Action |
+### Global Application Shortcuts
+| Shortcut | Action Description |
 | :--- | :--- |
-| **`Alt + K`** | Check for App Updates on GitHub |
-| **`Alt + U`** | Download & Update Core Engine Components (yt-dlp, FFmpeg) |
-| **`Alt + C`** | Cancel In-Progress Component Update |
+| `Ctrl + Shift + V` | Visual Sight Inspector to hear visual layout and focus indicators of focused control |
+| `Ctrl + Shift + A` | Global Application Visual Overview describing icon, window frame, and canvas |
+| `F1` | Open quick keyboard shortcuts help for active tab |
+| `Shift + F1` | Open Master Keyboard Shortcuts Guide containing all tabs |
+| `Ctrl + Tab` | Switch forward to next tab |
+| `Ctrl + Shift + Tab` | Switch backward to previous tab |
+| `Ctrl + Plus` | Increase user interface font size (125%, 150%, 175%) |
+| `Ctrl + Minus` | Decrease user interface font size |
+| `Ctrl + 0` | Reset font size back to default 100% |
+| `Win + Alt + F` | Global hotkey to bring Fetchly window to foreground |
+| `Ctrl + Q` | Cleanly exit Fetchly |
+| `Escape` | Close active dialog / stop audio probe / restore focus |
 
 ---
 
-## Support & Bug Reports
+## System Requirements
+* **Operating System**: Windows 10 or Windows 11 (64-bit recommended)
+* **Screen Reader Support**: NVDA, Freedom Scientific JAWS, or Windows SAPI
+* **Architecture**: Native x86_64 portable application (no installation or admin rights required)
 
-For questions, feature requests, or accessibility feedback:
-* **Developer:** Muhammad Arman
-* **Email:** <arman.munir77@gmail.com>
+---
+
+## Developer & Support
+* **Lead Architect & Developer**: Muhammad Arman
+* **Contact Email**: arman.munir77@gmail.com
+* **GitHub Repository**: [arman3034/Fetchly](https://github.com/arman3034/Fetchly)
